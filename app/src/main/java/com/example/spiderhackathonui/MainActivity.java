@@ -38,9 +38,42 @@ public class MainActivity extends AppCompatActivity {
         relativeLayouts[3] = findViewById(R.id.relativeLayout4);
 
         for (int i = 0; i < 4; i++) {
-            relativeLayouts[i].setVisibility(View.VISIBLE);
+            relativeLayouts[i].setVisibility(View.GONE);
             relativeLayouts[i].setOnClickListener(viewClicked);
         }
+
+        startAnimation();
+    }
+
+    private void startAnimation() {
+        final Animation leftIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_left);
+        final Animation rightIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_right);
+        relativeLayouts[0].setVisibility(View.VISIBLE);
+        relativeLayouts[0].setAnimation(leftIn);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                final Animation leftIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_left);
+                relativeLayouts[1].setAnimation(leftIn);
+                relativeLayouts[1].setVisibility(View.VISIBLE);
+            }
+        }, 250);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                final Animation leftIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_left);
+                relativeLayouts[2].setAnimation(leftIn);
+                relativeLayouts[2].setVisibility(View.VISIBLE);
+            }
+        }, 500);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                final Animation leftIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_left);
+                relativeLayouts[3].setAnimation(leftIn);
+                relativeLayouts[3].setVisibility(View.VISIBLE);
+            }
+        }, 750);
     }
 
     View.OnClickListener viewClicked = new View.OnClickListener() {
