@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:id="@+id/pagerElementLayout"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="HEADING"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:gravity="center"
+        android:id="@+id/detail_hd"
+        android:fontFamily="@font/nunito_semibold"
+        android:textColor="#FFF"/>
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="@drawable/bg_view_white"
+        android:layout_below="@id/detail_hd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+</RelativeLayout>
