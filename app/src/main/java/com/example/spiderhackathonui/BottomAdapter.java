@@ -33,11 +33,11 @@ public class BottomAdapter extends RecyclerView.Adapter<BottomAdapter.ViewHolder
             holder.news3.setText("Xbox Game Pass Ultimate: Microsoft Takes Aim at Sony With Cloud Gaming Service");
             holder.news4.setVisibility(View.GONE);
 
-            holder.img1.setImageResource(R.drawable.download_hl);
-            holder.img2.setImageResource(R.drawable.download_hl2);
-            holder.img3.setImageResource(R.drawable.download_hl3);
+            holder.img1.setImageResource(R.drawable.download);
+            holder.img2.setImageResource(R.drawable.download_1);
+            holder.img3.setImageResource(R.drawable.download_2);
             holder.img4.setVisibility(View.GONE);
-            holder.imgBig.setImageResource(R.drawable.download_hlbig);
+            holder.imgBig.setImageResource(R.drawable.download_scbig);
 
             holder.time1.setText("3k views \u2022 5 days");
             holder.time2.setText("1.5k views \u2022 3 days");
